@@ -18,22 +18,22 @@ public class lab2_3 {
         double yourBMI = yourWeight / (yourHeight * yourHeight);
         System.out.println("Your BMI: " + yourBMI);
 
-        double minTargetBMI = 18.5 * (yourHeight * yourHeight);
-        double maxTargetBMI = 24.9 * (yourHeight * yourHeight);
+        double minTargetWeightBMI = 18.5 * (yourHeight * yourHeight);
+        double maxTargetWeightBMI = 24.9 * (yourHeight * yourHeight);
 
         //Determine BMI classification.
         if(yourBMI < 18.5){
             System.out.println("Underweight!");
-            System.out.println("You should increase weight: " + ( minTargetBMI - yourWeight) + " kg");
+            System.out.println("You should increase weight: " + ( minTargetWeightBMI - yourWeight) + " kg");
         } else if (yourBMI >= 18.5 && yourBMI <= 24.9) {
             System.out.println("Normal weight!");
             System.out.println("You are perfect!");
         } else if (yourBMI >= 25 && yourBMI <= 29.9) {
             System.out.println("Overweight!");
-            System.out.println("You should decrease weight: " + ( yourWeight - maxTargetBMI) + " kg");
+            System.out.println("You should decrease weight: " + ( yourWeight - maxTargetWeightBMI) + " kg");
         } else {
             System.out.println("Obesity!");
-            System.out.println("You should decrease weight: " + ( yourWeight - maxTargetBMI) + " kg");
+            System.out.println("You should decrease weight: " + ( yourWeight - maxTargetWeightBMI) + " kg");
 
         }
     }
