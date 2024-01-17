@@ -18,8 +18,8 @@ public class lab2_3 {
         double yourBMI = yourWeight / (yourHeight * yourHeight);
         System.out.println("Your BMI: " + yourBMI);
 
-        double minTargetWeightBMI = 18.5 * (yourHeight * yourHeight);
-        double maxTargetWeightBMI = 24.9 * (yourHeight * yourHeight);
+        double minTargetWeightBMI = 18.5 * yourHeight * yourHeight;
+        double maxTargetWeightBMI = 24.9 * yourHeight * yourHeight;
 
         //Determine BMI classification.
         if(yourBMI < 18.5){
