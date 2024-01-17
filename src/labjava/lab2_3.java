@@ -34,6 +34,7 @@ public class lab2_3 {
         } else {
             System.out.println("Obesity!");
             System.out.println("You should decrease weight: " + ( yourWeight - maxTargetBMI) + " kg");
+
         }
     }
 }
