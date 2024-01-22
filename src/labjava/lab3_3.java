@@ -17,8 +17,8 @@ public class lab3_3 {
         System.out.println(Arrays.toString(myArray));
 
         Arrays.sort(myArray);
-        //for (int num : myArray)
-        for (int num = 0; num < myArray.length; num++){
+        //for (int num : myArray){
+        for(int num = 0; num < myArray.length; num++){
             System.out.printf(myArray[num] + ", ");
         }
     }
