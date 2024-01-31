@@ -57,7 +57,6 @@ public class lab4 {
             }
         }
     }
-
     public static ArrayList<Integer> generateRandomArrayList(int size){
         ArrayList<Integer> myArray = new ArrayList<>();
         Random random = new Random();
@@ -68,7 +67,6 @@ public class lab4 {
         }
         return myArray;
     }
-
     //Find Maximum value
     public static int findMaxValue(ArrayList<Integer> arrayList){
         int maxValue = arrayList.get(0);
@@ -79,7 +77,6 @@ public class lab4 {
         }
         return maxValue;
     }
-
     //Find Minimum value
     public static int findMinValue(ArrayList<Integer> arrayList){
         int minValue = arrayList.get(0);
@@ -90,7 +87,6 @@ public class lab4 {
         }
         return minValue;
     }
-
     //Find number
     public static int findNumber (ArrayList<Integer> arrayList, int fNumber){
         return arrayList.indexOf(fNumber);
