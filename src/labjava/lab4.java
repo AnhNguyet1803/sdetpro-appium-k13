@@ -6,50 +6,55 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class lab4 {
-    public static void main(String[] args){
-        System.out.println("=====MENU======");
-        System.out.println("1. Print all numbers\n2. Print maximum value\n" +
-                "3. Print minimum value\n4. Search number");
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please input a number: ");
-        int userNum = scanner.nextInt();
+    public static void main(String[] args) {
         ArrayList<Integer> myListRandom = generateRandomArrayList(10);
+        Scanner scanner = new Scanner(System.in);
 
-        //Print all numbers
-        if(userNum == 1){
-            System.out.println("Generated ArrayList: " + myListRandom);
-        }
-        //Print maximum value
-        else if (userNum == 2) {
-            System.out.println("Generated ArrayList: " + myListRandom);
-            int maxValue = findMaxValue(myListRandom);
-            System.out.println("Maximum value: " + maxValue);
-        }
-        //Print minimum value
-        else if (userNum == 3) {
-            System.out.println("Generated ArrayList: " + myListRandom);
-            int minValue = findMinValue(myListRandom);
-            System.out.println("Minimum value: " + minValue);
-        }
-        //Search number
-        else if (userNum ==4) {
-            System.out.println("Generated ArrayList: " + myListRandom);
-            Scanner scanner1 = new Scanner(System.in);
-            //Input number
-            System.out.print("Input number: ");
-            int yourNumber = scanner1.nextInt();
+        while (true) {
+            System.out.println("=====MENU======");
+            System.out.println("1. Print all numbers\n2. Print maximum value\n" +
+                    "3. Print minimum value\n4. Search number");
+            System.out.print("Please input a number: ");
+            int choice = scanner.nextInt();
 
-            int searchNumber = findNumber(myListRandom, yourNumber);
+            switch (choice) {
+                //Print all numbers
+                case 1:
+                    System.out.println("Generated ArrayList: " + myListRandom);
+                    break;
+                //Print maximum value
+                case 2:
+                    System.out.println("Generated ArrayList: " + myListRandom);
+                    int maxValue = findMaxValue(myListRandom);
+                    System.out.println("Maximum value: " + maxValue);
+                    break;
+                //Print minimum value
+                case 3:
+                    System.out.println("Generated ArrayList: " + myListRandom);
+                    int minValue = findMinValue(myListRandom);
+                    System.out.println("Minimum value: " + minValue);
+                    break;
+                //Search number
+                case 4:
+                    System.out.println("Generated ArrayList: " + myListRandom);
+                    Scanner scanner1 = new Scanner(System.in);
+                    //Input number
+                    System.out.print("Input number: ");
+                    int yourNumber = scanner1.nextInt();
 
-            if (searchNumber != -1) {
-                System.out.println(yourNumber + " is found in the ArrayList at index: " + searchNumber);
-            } else {
-                System.out.println(yourNumber + " is not found in the ArrayList.");
+                    int searchNumber = findNumber(myListRandom, yourNumber);
+
+                    if (searchNumber != -1) {
+                        System.out.println(yourNumber + " is found in the ArrayList at index: " + searchNumber);
+                    } else {
+                        System.out.println(yourNumber + " is not found in the ArrayList.");
+                    }
+                    //scanner.close();
+                    //System.exit(0);
+                    break;
+            default:
+                System.out.println("Sorry!! Please input number in Menu!");
             }
-            scanner.close();
-        } else {
-            System.out.println("Sorry!! Please input number in Menu!");
         }
     }
 
