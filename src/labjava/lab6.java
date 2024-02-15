@@ -103,7 +103,4 @@ public class lab6 {
         String extension = parts[parts.length - 1];
         return extension;
     }
-
-
-
 }
