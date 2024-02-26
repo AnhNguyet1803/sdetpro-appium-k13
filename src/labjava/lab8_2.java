@@ -59,6 +59,7 @@ public class lab8_2 {
         } else {
             winner = "Dog";
         }
+
         System.out.println("Winner is " + winner + ", with speed: " + maxSpeed + " km/h");
     }
 }
